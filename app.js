@@ -5,7 +5,7 @@ const homeRouter = require("./routes/home/home.router");
 const apiRouter = require("./routes/api/api.router");
 const cors = require("cors");
 app.use(cors({
-	"origin": "https://front-rosy-six.vercel.app/"}));
+	"origin": "https://main--aesthetic-faun-714c59.netlify.app/"}));
 app.use(express.json());
 app.use(express.static("public"));
 app.use("/", homeRouter);

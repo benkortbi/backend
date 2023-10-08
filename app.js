@@ -5,7 +5,7 @@ const homeRouter = require("./routes/home/home.router");
 const apiRouter = require("./routes/api/api.router");
 const cors = require("cors");
 app.use(cors({
-	"origin": "https://notem.netlify.app/"}));
+	"origin": "https://benkortbi.github.io/front/"}));
 app.use(express.json());
 app.use(express.static("public"));
 app.use("/", homeRouter);

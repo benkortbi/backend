@@ -6,13 +6,13 @@ const apiRouter = require("./routes/api/api.router");
 const cors = require("cors");
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public"));
-app.use("/", homeRouter);
-app.use("/api", apiRouter);
+app.use(express.static("public/dist"));
 
 app.get("/", (req, res) => {
-	req.status(200);
-	res.sendFile(path.join("public", "index.html"));
+	console.log("reached");
+	res.sendFile(path.join(__dirname, "public", "dist", "index.html"));
 });
+// app.use("/", homeRouter);
+app.use("/api", apiRouter);
 
 module.exports = app;

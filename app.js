@@ -4,8 +4,11 @@ const path = require("path");
 const homeRouter = require("./routes/home/home.router");
 const apiRouter = require("./routes/api/api.router");
 const cors = require("cors");
-app.use(cors({
-	"origin": "https://tranquil-pothos-3a5110.netlify.app/"}));
+app.use(
+	cors({
+		origin: "https://notem-fire.onrender.com/",
+	})
+);
 app.use(express.json());
 app.use(express.static("public/dist"));
 
